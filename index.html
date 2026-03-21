@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Mortgage IFA — Your Personal Mortgage Guide | Bishop's Stortford</title>
+<meta name="description" content="Your personal mortgage guide who removes the confusion from the biggest financial decision of your life. Independent mortgage advice in Bishop's Stortford, Hertfordshire.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+/* ── Reset & Base ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --teal: #1B5E6F;
+  --teal-dark: #154D5B;
+  --teal-light: #217486;
+  --copper: #C97546;
+  --copper-dark: #B5663A;
+  --copper-light: #D4885E;
+  --cream: #F5F1E8;
+  --cream-dark: #EDE8DC;
+  --charcoal: #2C3E50;
+  --charcoal-light: #3D5166;
+  --footer-bg: #243342;
+  --white: #FAFAF8;
+  --body-bg: #FDFCF9;
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  color: var(--charcoal);
+  background: var(--body-bg);
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  color: var(--teal);
+  line-height: 1.15;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--teal); text-decoration: none; }
+button { cursor: pointer; font-family: inherit; }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+/* ── Navigation ── */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(253, 252, 249, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(27, 94, 111, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.nav.scrolled {
+  box-shadow: 0 2px 24px rgba(27, 94, 111, 0.08);
+}
+
+.nav-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.nav-brand {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--teal);
+  letter-spacing: -0.02em;
+}
+
+.nav-brand span { color: var(--copper); }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--charcoal-light);
+  transition: color 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.nav-links a:hover { color: var(--teal); }
+
+.nav-cta {
+  background: var(--teal);
+  color: var(--white) !important;
+  padding: 0.6rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: background 0.2s ease, transform 0.15s ease;
+  border: none;
+}
+
+.nav-cta:hover { background: var(--teal-dark); }
+.nav-cta:active { transform: scale(0.97); }
+
+.nav-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.nav-mobile-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--charcoal);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+.nav-mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-mobile-toggle.active span:nth-child(2) { opacity: 0; }
+.nav-mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* ── Hero — Split Layout (Taste Rule 3: Anti-Center) ── */
+.hero {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 72px;
+}
+
+.hero-content {
+  padding: clamp(2rem, 5vw, 5rem) 0;
+  padding-left: clamp(1.25rem, 4vw, 3rem);
+  max-width: 600px;
+  justify-self: end;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--cream);
+  padding: 0.45rem 1rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--teal);
+  margin-bottom: 1.75rem;
+  letter-spacing: 0.02em;
+}
+
+.hero-eyebrow svg { flex-shrink: 0; }
+
+.hero h1 {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
+  color: var(--teal);
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--copper);
+}
+
+.hero-subtitle {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  color: var(--charcoal-light);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.hero-body {
+  font-size: 1rem;
+  color: var(--charcoal-light);
+  max-width: 50ch;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--teal);
+  color: var(--white);
+  padding: 0.85rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary:hover { background: var(--teal-dark); }
+.btn-primary:active { transform: scale(0.97); }
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: var(--copper);
+  padding: 0.85rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 2px solid var(--copper);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-secondary:hover { background: var(--copper); color: var(--white); }
+.btn-secondary:active { transform: scale(0.97); }
+
+.hero-trust {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(27, 94, 111, 0.1);
+}
+
+.hero-trust-item {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--charcoal-light);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.hero-trust-item svg { color: var(--copper); flex-shrink: 0; }
+
+.hero-image {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--body-bg) 0%, transparent 15%);
+}
+
+/* ── Section Shared ── */
+.section {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+
+.section-label {
+  display: inline-block;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--copper);
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+}
+
+.section-sub {
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  color: var(--charcoal-light);
+  max-width: 55ch;
+  line-height: 1.65;
+}
+
+/* ── Problem Section ── */
+.problem { background: var(--cream); }
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.problem-text { max-width: 520px; }
+
+.problem-closing {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--teal);
+  margin-top: 1.75rem;
+}
+
+.problem-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.problem-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(27, 94, 111, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.problem-card:hover { transform: translateY(-2px); }
+
+.problem-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(201, 117, 70, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  color: var(--copper);
+}
+
+.problem-card h4 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 0.35rem;
+}
+
+.problem-card p {
+  font-size: 0.85rem;
+  color: var(--charcoal-light);
+  line-height: 1.55;
+}
+
+/* ── Process Section ── */
+.process-steps {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.process-list { display: flex; flex-direction: column; gap: 0; }
+
+.process-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 1.25rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(27, 94, 111, 0.08);
+}
+
+.process-step:last-child { border-bottom: none; }
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--teal);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--teal);
+}
+
+.step-content p {
+  font-size: 0.95rem;
+  color: var(--charcoal-light);
+  line-height: 1.6;
+  max-width: 42ch;
+}
+
+.process-image {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.process-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 420px;
+}
+
+/* ── Services Section ── */
+.services { background: var(--cream); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.services-grid > :nth-child(2) { grid-row: span 2; }
+
+.service-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 2rem;
+  border: 1px solid rgba(27, 94, 111, 0.05);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover { transform: translateY(-2px); }
+
+.service-card-tall {
+  background: var(--teal);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  justify-content: flex-end;
+}
+
+.service-card-tall .service-icon { background: rgba(255,255,255,0.15); color: var(--white); }
+.service-card-tall h3 { color: var(--white); }
+.service-card-tall p { color: rgba(255,255,255,0.8); }
+.service-card-tall .service-link { color: var(--copper-light); }
+
+.service-card-tall::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(27, 94, 111, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  color: var(--teal);
+}
+
+.service-card h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--charcoal-light);
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.service-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--teal);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: gap 0.2s ease;
+}
+
+.service-link:hover { gap: 0.6rem; }
+
+/* ── Testimonials ── */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.testimonial-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 2rem;
+  border: 1px solid rgba(27, 94, 111, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-quote-mark {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--copper);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+}
+
+.testimonial-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 0.75rem;
+}
+
+.testimonial-card blockquote {
+  font-size: 0.92rem;
+  color: var(--charcoal-light);
+  line-height: 1.65;
+  font-style: italic;
+  flex-grow: 1;
+  margin-bottom: 1.25rem;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(27, 94, 111, 0.06);
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.testimonial-meta span {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+
+.testimonial-meta small {
+  font-size: 0.78rem;
+  color: var(--charcoal-light);
+}
+
+/* ── FAQ ── */
+.faq { background: var(--cream); }
+
+.faq-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.faq-intro p {
+  color: var(--charcoal-light);
+  margin-bottom: 1.5rem;
+  line-height: 1.65;
+}
+
+.faq-list { display: flex; flex-direction: column; gap: 0; }
+
+.faq-item {
+  border-bottom: 1px solid rgba(27, 94, 111, 0.1);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  color: var(--charcoal);
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.faq-question:hover { color: var(--teal); }
+
+.faq-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(27, 94, 111, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, background 0.2s ease;
+  color: var(--teal);
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  background: var(--teal);
+  color: var(--white);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+.faq-answer-inner {
+  padding-bottom: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--charcoal-light);
+  line-height: 1.7;
+  max-width: 55ch;
+}
+
+/* ── Final CTA ── */
+.final-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.final-cta-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.final-cta-content { max-width: 520px; }
+
+.final-cta .section-heading { color: var(--teal); }
+
+.final-cta-sub {
+  font-size: 1.05rem;
+  color: var(--charcoal-light);
+  margin-bottom: 2rem;
+  line-height: 1.65;
+}
+
+.final-cta-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 340px;
+}
+
+.final-cta-actions .btn-primary { justify-content: center; }
+.final-cta-actions .btn-secondary { justify-content: center; }
+
+.btn-text {
+  background: none;
+  border: none;
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.6rem 0;
+  text-align: left;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.btn-text:hover { color: var(--teal-dark); }
+
+.final-cta-image {
+  border-radius: 16px;
+  overflow: hidden;
+  max-height: 440px;
+}
+
+.final-cta-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 380px;
+}
+
+/* ── Footer ── */
+.footer {
+  background: var(--footer-bg);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 3rem 0 2rem;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-brand {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.footer-brand span { color: var(--copper-light); }
+
+.footer-desc {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 32ch;
+  margin-bottom: 1rem;
+}
+
+.footer-regulatory {
+  font-size: 0.78rem;
+  opacity: 0.6;
+  line-height: 1.5;
+}
+
+.footer h5 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.footer-contact-item svg { flex-shrink: 0; opacity: 0.7; }
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links-list a {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+  transition: color 0.2s ease;
+}
+
+.footer-links-list a:hover { color: var(--white); }
+
+.footer-bottom {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  opacity: 0.55;
+}
+
+.footer-bottom a { color: rgba(255,255,255,0.65); }
+.footer-bottom a:hover { color: var(--white); opacity: 1; }
+
+/* ── Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(36, 51, 66, 0.6);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background: var(--white);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  padding: 2.5rem;
+  transform: translateY(16px);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.modal-overlay.active .modal { transform: translateY(0); }
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--charcoal-light);
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.modal-close:hover { background: var(--cream); }
+
+.modal h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.modal-sub {
+  font-size: 0.9rem;
+  color: var(--charcoal-light);
+  margin-bottom: 1.75rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  color: var(--charcoal);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(27, 94, 111, 0.15);
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-family: inherit;
+  color: var(--charcoal);
+  background: var(--body-bg);
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--teal);
+}
+
+.form-group textarea { resize: vertical; min-height: 80px; }
+
+.form-group .error-text {
+  font-size: 0.78rem;
+  color: #C0392B;
+  margin-top: 0.3rem;
+  display: none;
+}
+
+.form-group.has-error input { border-color: #C0392B; }
+.form-group.has-error .error-text { display: block; }
+
+.modal-submit {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.modal-success {
+  text-align: center;
+  padding: 2rem 0;
+  display: none;
+}
+
+.modal-success.visible { display: block; }
+
+.modal-success svg {
+  margin: 0 auto 1rem;
+  color: var(--teal);
+}
+
+.modal-success h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-success p {
+  font-size: 0.92rem;
+  color: var(--charcoal-light);
+}
+
+/* ── Scroll Animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-content {
+    padding: 6rem 0 3rem;
+    padding-left: clamp(1.25rem, 4vw, 3rem);
+    padding-right: clamp(1.25rem, 4vw, 3rem);
+    max-width: 100%;
+    justify-self: start;
+  }
+  .hero-image { min-height: 360px; }
+  .hero-image::after { background: linear-gradient(to bottom, var(--body-bg) 0%, transparent 20%); }
+
+  .problem-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
+  .process-image { max-height: 360px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .services-grid > :nth-child(2) { grid-row: auto; }
+  .faq-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .final-cta-inner { grid-template-columns: 1fr; }
+  .final-cta-image { max-height: 320px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+  .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-mobile-toggle { display: flex; }
+
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--body-bg);
+    padding: 1.5rem;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(27, 94, 111, 0.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+
+  .hero h1 { font-size: clamp(1.9rem, 6vw, 2.5rem); }
+  .hero-trust { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+
+  .problem-cards { grid-template-columns: 1fr; }
+
+  .testimonials-grid { grid-template-columns: 1fr; }
+
+  .final-cta-actions { max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary { width: 100%; justify-content: center; }
+  .modal { padding: 1.75rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" aria-label="The Mortgage IFA — Home">The Mortgage <span>IFA</span></a>
+    <ul class="nav-links" id="navLinks" role="menubar">
+      <li role="none"><a href="#process" role="menuitem">How It Works</a></li>
+      <li role="none"><a href="#services" role="menuitem">Services</a></li>
+      <li role="none"><a href="#testimonials" role="menuitem">Testimonials</a></li>
+      <li role="none"><a href="#faq" role="menuitem">FAQ</a></li>
+      <li role="none"><a href="tel:01279793305" role="menuitem">01279 793305</a></li>
+      <li role="none"><button class="nav-cta" onclick="openModal()" role="menuitem">Free Mortgage Review</button></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ── Hero ── -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      FCA Regulated &middot; Independent Advice
+    </div>
+    <h1>From Confused to <em>Keys in Hand</em></h1>
+    <p class="hero-subtitle">Your Personal Mortgage Guide for Bishop's Stortford &amp; Beyond</p>
+    <p class="hero-body">Not all mortgages are created equal. Neither is all mortgage advice. We're the independent experts who find YOUR perfect fit — and stay with you all the way to completion.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="openModal()">
+        Get Your Free Mortgage Review
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+      <button class="btn-secondary" onclick="openModal()">Schedule a Chat</button>
+    </div>
+    <div class="hero-trust">
+      <div class="hero-trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Whole Market Access
+      </div>
+      <div class="hero-trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        9+ Years in Hertfordshire
+      </div>
+      <div class="hero-trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Unbiased Listed
+      </div>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="images/hero-couple-keys.jpg" alt="Happy couple receiving the keys to their new home from a mortgage adviser" loading="eager">
+  </div>
+</section>
+
+<!-- ── Problem Section ── -->
+<section class="section problem" id="problem">
+  <div class="container">
+    <div class="problem-grid">
+      <div class="problem-text reveal">
+        <span class="section-label">The Problem</span>
+        <h2 class="section-heading">Mortgages Shouldn't Be Confusing or Scary</h2>
+        <p class="section-sub">You're not one of thousands. You're one of one. The biggest financial decision of your life deserves more than a quick online quote or a bank adviser who can only offer their own products.</p>
+        <p class="problem-closing">With The Mortgage IFA, you get clarity, confidence, and genuine care.</p>
+      </div>
+      <div class="problem-cards reveal">
+        <div class="problem-card">
+          <div class="problem-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h4>Wrong mortgage</h4>
+          <p>Thousands wasted over the life of your loan on rates and terms that don't fit</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h4>High street bank</h4>
+          <p>Their product, not yours. Limited options from a single lender</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h4>Online quotes</h4>
+          <p>Impersonal and incomplete. No one to answer your real questions</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h4>DIY approach</h4>
+          <p>Risk of missing better deals that only a whole-market broker can find</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Process Section ── -->
+<section class="section" id="process">
+  <div class="container">
+    <span class="section-label reveal">How It Works</span>
+    <h2 class="section-heading reveal">Three Steps to Your Perfect Mortgage</h2>
+    <p class="section-sub reveal">We've guided hundreds of homebuyers, remortgagers, and families through this process. Here's the path from confused to confident.</p>
+
+    <div class="process-steps">
+      <div class="process-list">
+        <div class="process-step reveal">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Understand</h3>
+            <p>We review your full financial picture and explain mortgages in plain English. No jargon, no pressure — just honest conversation about your goals.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Position</h3>
+            <p>We search the entire market and show you options tailored to YOU. Not one lender's range — the whole market, with clear pros and cons.</p>
+          </div>
+        </div>
+        <div class="process-step reveal">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Complete</h3>
+            <p>We handle the paperwork, liaise with the lender, and stay on top of your application from offer to completion. You get the keys.</p>
+          </div>
+        </div>
+      </div>
+      <div class="process-image reveal">
+        <img src="images/adviser-consultation.jpg" alt="Mortgage adviser in a genuine consultation with clients, reviewing documents together" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Services Section ── -->
+<section class="section services" id="services">
+  <div class="container">
+    <span class="section-label reveal">What We Do</span>
+    <h2 class="section-heading reveal">More Than Just Mortgages</h2>
+    <p class="section-sub reveal">Your full financial picture, covered. From finding your perfect mortgage to protecting what matters most.</p>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Mortgages</h3>
+        <p>Buy, remortgage, invest. First-time buyers to seasoned landlords — we find your perfect fit from the whole market. Specialist and adverse credit options available.</p>
+        <a href="#" class="service-link" onclick="event.preventDefault(); openModal()">Get started <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="service-card service-card-tall reveal">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Protection Insurance</h3>
+        <p>Protect your family if life changes. Life insurance, critical illness cover, and payment protection — tailored to your mortgage and your circumstances. Because the right cover isn't just a box to tick.</p>
+        <a href="#" class="service-link" onclick="event.preventDefault(); openModal()">Protect your family <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><line x1="12" y1="6" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="18"/></svg>
+        </div>
+        <h3>Equity Release</h3>
+        <p>Access your home's wealth while you keep living in it. We explain the options clearly and help you choose the path that feels right for your retirement.</p>
+        <img src="images/retirement-couple-home.jpg" alt="Retired couple relaxing happily in their garden, enjoying financial independence" loading="lazy" style="border-radius:10px;margin:1rem 0 1rem;max-height:160px;width:100%;object-fit:cover;">
+        <a href="#" class="service-link" onclick="event.preventDefault(); openModal()">Explore options <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>General Insurance</h3>
+        <p>Insure your home and everything in it. Buildings, contents, and specialist coverage — because your biggest asset deserves proper protection.</p>
+        <a href="#" class="service-link" onclick="event.preventDefault(); openModal()">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Testimonials ── -->
+<section class="section" id="testimonials">
+  <div class="container">
+    <span class="section-label reveal">Trusted by Hundreds</span>
+    <h2 class="section-heading reveal">What Our Clients Say</h2>
+    <p class="section-sub reveal">Trusted by hundreds of homebuyers, remortgagers, and families across Hertfordshire.</p>
+
+    <div style="border-radius:16px;overflow:hidden;max-height:260px;margin-top:2.5rem;margin-bottom:2rem;" class="reveal">
+      <img src="images/cosy-home-interior.jpg" alt="A warm, inviting home interior with soft lighting and comfortable furnishings" loading="lazy" style="width:100%;height:260px;object-fit:cover;object-position:center;">
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote-mark">"</div>
+        <h4>They made buying our first home actually enjoyable</h4>
+        <blockquote>We were terrified of making a mistake. The Mortgage IFA didn't just find us a mortgage — they explained every step, answered all our questions, and made us feel like we were their only client. We got the keys in March and couldn't be happier.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">S&T</div>
+          <div class="testimonial-meta">
+            <span>Sarah &amp; Tom</span>
+            <small>Bishop's Stortford</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote-mark">"</div>
+        <h4>We saved &pound;180/month by switching mortgages</h4>
+        <blockquote>Our old lender didn't move on rates when the market shifted. The Mortgage IFA found us a better deal that cut our payments and locked in certainty for the next 5 years. The whole process was stress-free — they handled everything.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">J</div>
+          <div class="testimonial-meta">
+            <span>James</span>
+            <small>Hertfordshire</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote-mark">"</div>
+        <h4>We accessed our home's wealth and kept our independence</h4>
+        <blockquote>We weren't sure if equity release was right for us. The team explained the options clearly, showed us the numbers, and helped us choose the path that felt right. Now we're enjoying retirement without financial worry.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">M&D</div>
+          <div class="testimonial-meta">
+            <span>Margaret &amp; David</span>
+            <small>Essex</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote-mark">"</div>
+        <h4>We're protected, and that gives us peace of mind</h4>
+        <blockquote>When my husband's health changed, we realised how exposed we were financially. The Mortgage IFA arranged protection insurance that covers the mortgage if something happens to either of us. It's a weight off our shoulders.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">C</div>
+          <div class="testimonial-meta">
+            <span>Claire</span>
+            <small>Bishop's Stortford</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ Section ── -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-intro reveal">
+        <span class="section-label">FAQ</span>
+        <h2 class="section-heading">Questions? We Have Answers</h2>
+        <p>We know mortgages can feel overwhelming. Here are the questions we get asked most often — and if yours isn't here, just give us a ring.</p>
+        <button class="btn-primary" onclick="openModal()">
+          Ask Us Anything
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How long does the mortgage process take?
+            <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Typically 4 to 8 weeks from application to completion, though it depends on your circumstances and the property chain. We keep you updated at every stage so there are no surprises.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What if my credit score isn't perfect?
+            <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Imperfect credit doesn't mean you can't get a mortgage. We have access to specialist lenders who consider the full picture — not just a number. We'll review your situation and find realistic options.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How much do your services cost?
+            <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Our initial consultation is completely free with no obligation. We'll be upfront about any fees before you commit to anything. No hidden charges, no surprises — ever.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can you help with specialist mortgages?
+            <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Absolutely. Self-employed, contractors, adverse credit, buy-to-let, HMOs — we work with specialist lenders who cater to circumstances that high street banks often decline.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            What's equity release and is it right for me?
+            <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Equity release lets homeowners aged 55+ access the value tied up in their property without having to move. It's not right for everyone, which is exactly why we take time to explain the options and help you decide if it suits your situation.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Do you have a mortgage available for me?
+            <span class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">With access to the whole mortgage market, we can search thousands of products from over 90 lenders. Whether you're a first-time buyer, moving home, or remortgaging, there's a strong chance we can find something that works for you. All mortgage products are subject to individual assessment and lending criteria.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Final CTA ── -->
+<section class="section final-cta" id="contact">
+  <div class="container">
+    <div class="final-cta-inner">
+      <div class="final-cta-content reveal">
+        <span class="section-label">Get Started</span>
+        <h2 class="section-heading">Ready to Find Your Perfect Mortgage?</h2>
+        <p class="final-cta-sub">Let's chat. No pressure, no obligation. Just an honest conversation about your situation and how we can help.</p>
+        <div class="final-cta-actions">
+          <button class="btn-primary" onclick="openModal()">
+            Get Free Mortgage Review
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <button class="btn-secondary" onclick="openModal()">Schedule a Chat</button>
+          <button class="btn-text" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+            Explore All Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="final-cta-image reveal">
+        <img src="images/family-in-home.jpg" alt="A family relaxing together in their warm, sunlit living room" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">The Mortgage <span>IFA</span></div>
+        <p class="footer-desc">Your personal mortgage guide who removes the confusion from the biggest financial decision of your life.</p>
+        <p class="footer-regulatory">The Mortgage IFA is authorised and regulated by the Financial Conduct Authority. Your home may be repossessed if you do not keep up repayments on your mortgage. All mortgage products are subject to individual assessment and lending criteria.</p>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:01279793305" style="color: inherit;">01279 793305</a>
+        </div>
+        <div class="footer-contact-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Bishop's Stortford, Hertfordshire
+        </div>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul class="footer-links-list">
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#" onclick="event.preventDefault()">Privacy Policy</a></li>
+          <li><a href="#" onclick="event.preventDefault()">Cookie Policy</a></li>
+          <li><a href="#" onclick="event.preventDefault()">Compliance</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; The Mortgage IFA &middot; FCA Regulated &middot; Unbiased Listed</span>
+      <span>Demo built by <a href="https://dreamfree.co.uk" target="_blank" rel="noopener">Dreamfree</a> &middot; dreamfree.co.uk</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Modal ── -->
+<div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close form">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div id="modalForm">
+      <h2 id="modalTitle">Let's Find Your Perfect Mortgage</h2>
+      <p class="modal-sub">No pressure, no obligation. Tell us a little about what you need.</p>
+      <form id="contactForm" novalidate>
+        <div class="form-group" id="nameGroup">
+          <label for="formName">Your name</label>
+          <input type="text" id="formName" placeholder="e.g. Sarah Thompson" autocomplete="name" required>
+          <div class="error-text">Please enter your name</div>
+        </div>
+        <div class="form-group" id="emailGroup">
+          <label for="formEmail">Email address</label>
+          <input type="email" id="formEmail" placeholder="e.g. sarah@example.co.uk" autocomplete="email" required>
+          <div class="error-text">Please enter a valid email address</div>
+        </div>
+        <div class="form-group" id="phoneGroup">
+          <label for="formPhone">Phone number</label>
+          <input type="tel" id="formPhone" placeholder="e.g. 07700 123456" autocomplete="tel">
+          <div class="error-text">Please enter a valid phone number</div>
+        </div>
+        <div class="form-group">
+          <label for="formNeed">What do you need help with?</label>
+          <textarea id="formNeed" placeholder="e.g. First-time buyer looking at properties in Bishop's Stortford..." rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn-primary modal-submit">
+          Get Started
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+    </div>
+    <div class="modal-success" id="modalSuccess">
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <h3>Thanks! We'll be in touch</h3>
+      <p>Expect to hear from us within 24 hours. We're looking forward to helping you.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ── Navigation Scroll Effect ── */
+(function() {
+  var nav = document.getElementById('nav');
+  var lastScroll = 0;
+  window.addEventListener('scroll', function() {
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+    if (st > 20) { nav.classList.add('scrolled'); }
+    else { nav.classList.remove('scrolled'); }
+    lastScroll = st;
+  }, { passive: true });
+})();
+
+/* ── Mobile Menu Toggle ── */
+(function() {
+  var toggle = document.getElementById('mobileToggle');
+  var links = document.getElementById('navLinks');
+  toggle.addEventListener('click', function() {
+    var isOpen = links.classList.toggle('mobile-open');
+    toggle.classList.toggle('active');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  links.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
+      links.classList.remove('mobile-open');
+      toggle.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+
+/* ── FAQ Accordion ── */
+(function() {
+  var items = document.querySelectorAll('.faq-item');
+  items.forEach(function(item) {
+    var btn = item.querySelector('.faq-question');
+    var answer = item.querySelector('.faq-answer');
+    var inner = answer.querySelector('.faq-answer-inner');
+    btn.addEventListener('click', function() {
+      var isActive = item.classList.contains('active');
+      items.forEach(function(i) {
+        i.classList.remove('active');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        i.querySelector('.faq-answer').style.maxHeight = '0';
+      });
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+        answer.style.maxHeight = inner.scrollHeight + 24 + 'px';
+      }
+    });
+  });
+})();
+
+/* ── Modal ── */
+function openModal() {
+  document.getElementById('modalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  setTimeout(function() { document.getElementById('formName').focus(); }, 300);
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+  /* Reset form after close */
+  setTimeout(function() {
+    document.getElementById('modalForm').style.display = '';
+    document.getElementById('modalSuccess').classList.remove('visible');
+    document.getElementById('contactForm').reset();
+    document.querySelectorAll('.form-group').forEach(function(g) { g.classList.remove('has-error'); });
+  }, 300);
+}
+document.getElementById('modalOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+/* ── Form Validation ── */
+(function() {
+  var form = document.getElementById('contactForm');
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var valid = true;
+    /* Clear errors */
+    document.querySelectorAll('.form-group').forEach(function(g) { g.classList.remove('has-error'); });
+    var name = document.getElementById('formName').value.trim();
+    var email = document.getElementById('formEmail').value.trim();
+    if (!name) { document.getElementById('nameGroup').classList.add('has-error'); valid = false; }
+    if (!email || !emailRegex.test(email)) { document.getElementById('emailGroup').classList.add('has-error'); valid = false; }
+    if (valid) {
+      document.getElementById('modalForm').style.display = 'none';
+      document.getElementById('modalSuccess').classList.add('visible');
+    }
+  });
+})();
+
+/* ── Scroll Reveal ── */
+(function() {
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(function(el) { observer.observe(el); });
+})();
+</script>
+
+<!-- Microsoft Clarity Analytics -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window,document,"clarity","script","YOUR_PROJECT_ID");
+</script>
+
+</body>
+</html>
