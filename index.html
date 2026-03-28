@@ -1044,6 +1044,12 @@ button { cursor: pointer; font-family: inherit; }
   .hero-actions .btn-secondary { width: 100%; justify-content: center; }
   .modal { padding: 1.75rem; }
 }
+
+/* ---- LAPTOP SCREEN OPTIMISATION (DRE-17) ---- */
+@media (min-width: 769px) and (max-width: 1440px) {
+  .hero { min-height: min(78dvh, 720px); }
+  section:not(.hero) { padding-top: 72px; padding-bottom: 72px; }
+}
 </style>
 </head>
 <body>
